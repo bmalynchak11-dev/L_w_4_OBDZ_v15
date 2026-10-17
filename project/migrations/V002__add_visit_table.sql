@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS visit (
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    member_id INT NOT NULL REFERENCES member(id),
+    workout_id INT NOT NULL REFERENCES workout(id),
+    places INT NOT NULL DEFAULT 1,
+    paid NUMERIC(12, 2) NOT NULL,
+    state VARCHAR(20) NOT NULL,
+    visited_at TIMESTAMP NOT NULL
+);

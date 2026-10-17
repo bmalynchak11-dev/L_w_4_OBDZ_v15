@@ -1,0 +1,3 @@
+\copy member (id, full_name, email, city, joined_on) FROM 'data/member.csv' WITH (FORMAT csv);
+\copy workout (id, code, title, kind, price) FROM 'data/workout.csv' WITH (FORMAT csv);
+\copy visit (id, member_id, workout_id, places, paid, state, visited_at, comment) FROM 'data/visit.csv' WITH (FORMAT csv);

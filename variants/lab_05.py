@@ -1,12 +1,7 @@
-"""Задача 5. Складений індекс під запит із рівностями, діапазоном і сортуванням.
-
-Опис і умови: student.md, розділ «Опис задач», задача 5; картка вашого варіанта.
-"""
-
-# Впишіть номер свого варіанта (13-15).
-VARIANT = 0
+VARIANT = 15
 
 
 def indexes() -> list[str]:
-    """Повертає список команд CREATE INDEX (достатньо однієї), що прискорюють запит вашого набору."""
-    raise NotImplementedError("Реалізуйте indexes() за карткою варіанта задачі 5")
+    return [
+        "CREATE INDEX visit_member_state_visited_idx ON visit (member_id, state, visited_at)"
+    ]
