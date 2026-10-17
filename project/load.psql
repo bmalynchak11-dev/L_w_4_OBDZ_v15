@@ -1,3 +1,6 @@
+\copy trainer (id, full_name, specialization, phone) FROM 'data/trainer.csv' WITH (FORMAT csv);
+\copy workout_room (id, room_number, capacity) FROM 'data/workout_room.csv' WITH (FORMAT csv);
+\copy membership_plan (id, name, duration_days, price) FROM 'data/membership_plan.csv' WITH (FORMAT csv);
 \copy member (id, full_name, email, city, joined_on) FROM 'data/member.csv' WITH (FORMAT csv);
-\copy workout (id, code, title, kind, price) FROM 'data/workout.csv' WITH (FORMAT csv);
-\copy visit (id, member_id, workout_id, places, paid, state, visited_at, comment) FROM 'data/visit.csv' WITH (FORMAT csv);
+\copy workout (id, code, title, kind, price, trainer_id) FROM 'data/workout.csv' WITH (FORMAT csv);
+\copy visit (id, member_id, workout_id, places, paid, state, visited_at) FROM 'data/visit.csv' WITH (FORMAT csv);
